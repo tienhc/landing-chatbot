@@ -1,0 +1,192 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Service CSS
+----------------------------------------*/
+
+.service-item{
+    background-color: var(--pb-color-common-white);
+    padding: 40px 40px 60px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    margin-bottom: 30px;
+    @include transition(all 0.3s ease-in-out);
+    &:hover{
+        margin-top: -10px;
+        @include breakpoint(md){
+            margin-top: 0;
+        }
+    }
+    .service-icon{
+        background-color: var(--pb-color-common-white);
+        height: 100px;
+        width: 100px;
+        @include flex-center;
+        filter: drop-shadow(0px 0px 60px rgba(0, 0, 0, 0.05));
+        margin: 0 auto;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        img{
+            width: 60px;
+            height: 60px;
+        }
+    }
+    .title{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 20px;
+    }
+    .service-btn{
+        position: absolute;
+        left: 50%;
+        bottom: -30px;
+        transform: translateX(-50%);
+        a{  
+            background-color: var(--pb-color-common-white);
+            color: #47479F;
+            height: 60px;
+            width: 60px;
+            font-size: 20px;
+            @include flex-center;
+            border: 1px solid var(--pb-color-border-1);
+            border-radius: 50%;
+            @include transition(all 0.3s ease-in-out);
+            &:hover{
+                background-color: #47479F;
+                color: var(--pb-color-common-white);
+                border: transparent;
+            }
+        }
+    }
+}
+
+// Service 2
+
+.service-section-2{
+    overflow: hidden;
+    .section-heading{
+        .section-title{
+            margin: 0 auto;
+        }
+    }
+}
+
+.service-box-wrap{
+    .service-box{
+        background-color: var(--pb-color-theme-secondary);
+        @include flex-vertical-center;
+        justify-content: space-between;
+        max-width: 630px;
+        width: 100%;
+        border-radius: 20px;
+        position: relative;
+        @include breakpoint(md){
+            margin: 0 auto;
+        }
+        &:not(:last-of-type){
+            margin-bottom: 60px;
+        }
+        &:before{
+            background: rgba(34, 31, 63, 0.1);
+            content: "";
+            width: 1px;
+            height: 100%;
+            position: absolute;
+            left: 68%;
+            top: 0;
+            transform: translateX(-50%);
+            @include breakpoint(sm){
+                left: 65%;
+            }
+        }
+        .shape{
+            position: absolute;
+            bottom: 0;
+            left: -160px;
+        }
+        .service-left{
+            padding: 30px 35px;
+            .service-icon{
+                background-color: var(--pb-color-common-white);
+                width: 100px;
+                height: 100px;
+                border-radius: 50%;
+                @include flex-center;
+                margin-bottom: 30px;
+            }
+            .title{
+                font-size: 22px;
+                font-weight: 600;
+                margin-bottom: 20px;
+            }
+            p{
+                color: var(--pb-color-heading-primary);
+                font-size: 16px;
+                font-weight: 500;
+                max-width: 370px;
+                width: 100%;
+                margin-bottom: 0;
+                @include breakpoint(sm){
+                    max-width: 330px;
+                }
+            }
+        }
+        .service-right{
+            padding-right: 35px;
+        }
+        &:nth-child(2){
+            margin-left: 330px;
+            @include breakpoint(xl){
+                margin-left: 200px;
+            }
+            @include breakpoint(lg){
+                margin-left: 100px;
+            }
+            @include breakpoint(md){
+                margin-left: 0;
+            }
+            @include breakpoint(md){
+                margin: 0 auto;
+            }
+        }
+        &:nth-child(3){
+            margin-left: 650px;
+            @include breakpoint(xl){
+                margin-left: 520px;
+            }
+            @include breakpoint(lg){
+                margin-left: 300px;
+            }
+            @include breakpoint(md){
+                margin: 0 auto;
+            }
+        }
+        &:not(:last-of-type){
+            margin-bottom: 60px;
+            @include breakpoint(md){
+                margin-bottom: 40px;
+            }
+        }
+    }
+}
+
+
+.service-page{
+    .service-item{
+        .service-btn{
+            a{
+                background-color: var(--pb-color-theme-primary);
+                color: var(--pb-color-common-white);
+                border: 1px solid var(--pb-color-theme-primary);
+                &:hover{
+                    background-color: var(--pb-color-heading-primary);
+                    border: 1px solid var(--pb-color-heading-primary);
+                }
+            }
+        }
+    }
+}
+
+
+/* !END: Theme Service CSS */

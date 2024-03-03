@@ -1,0 +1,65 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Promo CSS
+----------------------------------------*/
+.promo-section{
+    margin-top: -100px;
+    position: relative;
+    z-index: 1;
+}
+
+.promo-item{
+    background-color: var(--pb-color-common-white);
+    border-radius: 20px;
+    border-bottom: 4px solid var(--pb-color-theme-secondary);
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+    overflow: hidden;
+    padding: 50px 40px;
+    height: 100%;
+    .promo-header{
+        @include breakpoint(sm){
+            font-size: 24px;
+        }
+    }
+    .promo-icon{
+        margin-bottom: 30px;
+    }
+    .title{
+        font-size: 22px;
+        font-weight: 600;
+        margin-bottom: 30px;
+    }
+    p{
+        margin-bottom: 40px;
+    }
+    .promo-list{
+        list-style: none;
+        li{
+            font-size: 16px;
+            &:not(:last-of-type){
+                margin-bottom: 15px;
+            }
+            i{
+                color: var(--pb-color-theme-primary);
+                font-size: 14px;
+                margin-right: 10px;
+            }
+        }
+    }
+    &.item-1{
+        padding: 90px 40px;
+        @include breakpoint(sm){
+            font-size: 24px;
+            padding: 50px 40px;
+        }
+        .promo-header{
+            margin-bottom: 20px;
+        }
+        p{
+            margin-bottom: 40px;
+        }
+    }
+}
+
+/* !END: Theme Promo CSS */

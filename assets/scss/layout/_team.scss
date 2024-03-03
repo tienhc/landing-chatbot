@@ -1,0 +1,236 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Team CSS
+----------------------------------------*/
+
+.team-section{
+    .section-heading{
+        .section-title{
+            span{
+                &:before{
+                    bottom: 0px;
+                }
+            }
+        }
+    }
+}
+
+.team-wrap{
+    --team-gradient-bg: linear-gradient(180deg, rgba(251, 82, 82, 0.25) 0%, rgba(251, 82, 82, 0.00) 100%);
+    >div:nth-child(2){
+        --team-gradient-bg: linear-gradient(180deg, rgba(254, 157, 81, 0.25) 0%, rgba(254, 157, 81, 0.00) 100%);
+    }
+    >div:nth-child(3){
+        --team-gradient-bg: linear-gradient(180deg, rgba(87, 210, 136, 0.25) 0%, rgba(87, 210, 136, 0.00) 100%);
+    }
+    >div:nth-child(4){
+        --team-gradient-bg: linear-gradient(180deg, rgba(101, 126, 255, 0.25) 0%, rgba(101, 126, 255, 0.00) 100%);
+    }
+    >div:nth-child(6){
+        --team-gradient-bg: linear-gradient(180deg, rgba(254, 157, 81, 0.25) 0%, rgba(254, 157, 81, 0.00) 100%);
+    }
+    >div:nth-child(7){
+        --team-gradient-bg: linear-gradient(180deg, rgba(87, 210, 136, 0.25) 0%, rgba(87, 210, 136, 0.00) 100%);
+    }
+    >div:nth-child(8){
+        --team-gradient-bg: linear-gradient(180deg, rgba(101, 126, 255, 0.25) 0%, rgba(101, 126, 255, 0.00) 100%);
+    }
+}
+
+.team-item{
+    .team-thumb{
+        background: var(--team-gradient-bg);
+        height: 410px;
+        border-radius: 340px;
+        overflow: hidden;
+        position: relative;
+        img{
+            height: 100%;
+            object-fit: cover;
+            object-position: bottom center;
+        }
+        .team-social{
+            position: absolute;
+            bottom: 50px;
+            left: 50%;
+            transform: translateX(-50%);
+            list-style: none;
+            @include transition(all 0.3s ease-in-out);
+            li{
+                @include transition(all 0.3s ease-in-out);
+                visibility: hidden;
+                opacity: 0;
+                &:not(:last-of-type){
+                    margin-bottom: 10px;
+                }
+                a{
+                    background: var(--pb-color-common-purple);
+                    color: var(--pb-color-common-white);
+                    font-size: 14px;
+                    height: 35px;
+                    width: 35px;
+                    @include flex-center;
+                    border-radius: 50%;
+                    &:hover{
+                        background: var(--pb-color-theme-primary);
+                    }
+                }
+                &:nth-child(1){
+                    transition-delay: 250ms;
+                }
+                &:nth-child(2){
+                    transition-delay: 200ms;
+                }
+                &:nth-child(3){
+                    transition-delay: 150ms;
+                }
+                &:nth-child(4){
+                    transition-delay: 100ms;
+                }
+            }
+        }
+    }
+    .team-content{
+        margin-top: 20px;
+        .title{
+            font-size: 30px;
+            margin-bottom: 5px;
+        }
+    }
+    &:hover{
+        .team-thumb{
+            .team-social{
+                bottom: 50px;
+                li{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+//  Team Details
+
+.team-details-content{
+    padding-left: 30px;
+    @include breakpoint(md){
+        padding-left: 0;
+    }
+    .title{
+        font-size: 54px;
+        font-weight: 700;
+        @include breakpoint(md){
+            font-size: 40px;
+        }
+        @include breakpoint(sm){
+            font-size: 28px;
+        }
+    }
+    span{
+        font-size: 16px;
+        font-weight: 500;
+        color: var(--pb-color-text-body);
+    }
+    .social-list{
+        list-style: none;
+        margin: 30px 0;
+        li{
+            display: inline-flex;
+            &:not(:last-of-type){
+                margin-right: 5px;
+            }
+            a{
+                color: var(--pb-color-heading-primary);
+                @include flex-center;
+                border: 1px solid var(--pb-color-border-1);
+                height: 35px;
+                width: 35px;
+                border-radius: 5px;
+                &:hover{
+                    background-color: #0866FF;
+                    color: var(--pb-color-common-white);
+                    border: 1px solid transparent;
+                }
+            }
+            &:nth-child(2){
+                &:hover{
+                    a{
+                        background-color: #229EF2;
+                    }
+                }
+            }
+            &:nth-child(3){
+                &:hover{
+                    a{
+                        background-color: #0681BA;
+                    }
+                }
+            }
+            &:nth-child(4){
+                &:hover{
+                    a{
+                        background-color: #EE2A7B;
+                    }
+                }
+            }
+        }
+    }
+    p{
+        max-width: 710px;
+        width: 100%;
+        margin-bottom: 0;
+    }
+}
+
+.team-details-wrap{
+    margin-top: 50px;
+    @include breakpoint(sm){
+        margin-top: 30px;
+    }
+    .details-content{
+        padding-right: 20px;
+        @include breakpoint(md){
+            padding-right: 0;
+        }
+        .title{
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+        .details-progress{
+            list-style: none;
+            .skills-item{
+                overflow: hidden;
+                &:not(:last-of-type){
+                    margin-bottom: 30px;
+                }
+                h5{
+                    font-size: 16px;
+                    font-weight: 500;
+                }
+                .progress{
+                    height: 8px;
+                    overflow: visible;
+                    .progress-bar{
+                        background-color: var(--pb-color-common-purple);
+                        border-radius: 20px;
+                        position: relative;
+                        overflow: visible;
+                        span{
+                            position: absolute;
+                            top: -25px;
+                            right: -15px;
+                            font-size: 14px;
+                            font-weight: 600;
+                            color: var(--pb-color-heading-primary);
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* !END: Theme Team CSS */

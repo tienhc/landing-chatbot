@@ -1,0 +1,35 @@
+$colors: (
+    "common": (
+        "white": #ffffff,
+        "black": #000000,
+        "yellow": #FF9D15,
+        "yellow-2": #FF5E14,
+        "purple": #657EFF,
+    ),
+    "heading": (
+        "primary": #221F3F,
+    ),
+    'text': (
+        "body": #6D6C79,
+    ),
+    "theme": (
+        "primary": #FB5252,
+        "secondary": #57D288,
+    ),
+    "gradient": (
+        1: linear-gradient(81deg, #E8411D 0%, #FAAC52 100%),
+        2: linear-gradient(80deg, #47479F 0%, #9191D7 100%),
+    ),
+    'grey': (
+        1: #F4F5F9,
+    ),
+    "border": (
+        1: rgba(109, 108, 121, 0.2),
+        2: rgba(15, 27, 36, 0.1),
+        3: rgba(255, 255, 255, 0.1),
+        4: rgba(109, 108, 121, 0.5),
+    ),
+    "shadow": (
+        1: 0px 0px 60px 0px rgba(0, 0, 0, 0.05),
+    ),
+);

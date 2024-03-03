@@ -1,0 +1,91 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Skill CSS
+----------------------------------------*/
+.skill-content{
+    .section-heading{
+        margin-bottom: 50px;
+        @include breakpoint(md){
+            margin-bottom: 30px;
+        }
+        .section-title{
+            margin-bottom: 15px;
+        }
+        p{
+            max-width: 500px;
+            width: 100%;
+        }
+    }
+}
+
+
+.skills-items{
+    max-width: 480px;
+    width: 100%;
+    .skills-item{
+        overflow: hidden;
+        padding-top: 30px;
+        padding-bottom: 10px;
+        &:not(:last-of-type){
+            margin-bottom: 25px;
+        }
+        .item-content{
+            @include flex-vertical-center;
+            justify-content: space-between;
+            span,
+            .title{
+                color: var(--pb-color-text-body);
+                font-size: 16px;
+                font-weight: 500;
+                margin-bottom: 0;
+                position: relative;
+                z-index: 1;
+            }
+            .title{
+                margin-bottom: 20px;
+            }
+        }
+        .progress{
+            height: 3px;
+            overflow: visible;
+            .progress-bar{
+                position: relative;
+                background-color: var(--pb-color-theme-primary);
+                overflow: visible;
+                span{
+                    background-repeat: no-repeat;
+                    color: var(--pb-color-common-white);
+                    padding: 10px 10px 20px 10px;
+                    position: absolute;
+                    top: -66px;
+                    right: -11px;
+                }
+                .dot{
+                    background-color: var(--pb-color-theme-primary);
+                    height: 20px;
+                    width: 20px;
+                    position: absolute;
+                    top: 50%;
+                    right: 0;
+                    transform: translateY(-50%);
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+}
+
+.skill-img{
+    img{
+        width: 100%;
+    }
+}
+
+.skill-wrap{
+    @include breakpoint(md){
+        flex-direction: column-reverse;
+    }
+}
+
+/* !END: Theme Skill CSS */

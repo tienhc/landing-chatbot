@@ -1,0 +1,75 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Feature CSS
+----------------------------------------*/
+.feature-section{
+    padding: 200px 0;
+    overflow: hidden;
+    @include breakpoint(md){
+        padding: 70px 0;
+    }
+    @include breakpoint(sm){
+        padding: 50px 0;
+    }
+    .section-heading{
+        position: relative;
+        z-index: 1;
+        .shapes{
+            @include breakpoint(md){
+                display: none;
+            }
+            .shape{
+                position: absolute;
+                top: 0;
+                right: -50px;
+                &.shape-2{
+                    right: auto;
+                    left: -200px;
+                    top: 50%;
+                }
+            }
+        }
+    }
+}
+
+
+.feature-item{
+    padding-bottom: 35px;
+    border-bottom: 1px solid var(--pb-color-border-4);
+    &:not(:last-of-type){
+        margin-bottom: 35px;
+    }
+    .feature-left{
+        @include flex-vertical-center;
+        column-gap: 100px;
+        @include breakpoint(md){
+            column-gap: 50px;
+        }
+        @include breakpoint(sm){
+            margin-bottom: 30px;
+        }
+        .icon{
+            @include breakpoint(md){
+                width: 100px;
+            }
+        }
+        .title{
+            color: var(--pb-color-common-white);
+            font-size: 30px;
+            font-weight: 600;
+            margin-bottom: 0;
+            @include breakpoint(md){
+                font-size: 22px;
+            }
+        }
+    }
+    p{
+        color: rgba(255, 255, 255, 0.7);
+        margin-bottom: 0;
+        max-width: 630px;
+        width: 100%;
+    }
+}
+
+/* !END: Theme Feature CSS */

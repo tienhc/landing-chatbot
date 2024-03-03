@@ -1,0 +1,205 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Contact CSS
+----------------------------------------*/
+.contact-item{
+    border: 1px solid var(--pb-color-border-1);
+    padding: 40px;
+    .icon{
+        background-color: rgba(254, 86, 36, .10);
+        font-size: 25px;
+        color: var(--pb-color-theme-primary);
+        width: 70px;
+        height: 70px;
+        @include flex-center;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+    .title{
+        font-size: 24px;
+        font-weight: 500;
+        margin-bottom: 15px;
+    }
+    .number{
+        font-family: var(--pb-ff-heading);
+        color: var(--pb-color-heading-primary);
+        font-size: 25px;
+        font-weight: 600;
+        display: block;
+        margin-bottom: 20px;
+    }
+    .contact-btn{
+        background-color: var(--pb-color-grey-1);
+        font-family: var(--pb-ff-heading);
+        font-size: 14px;
+        font-weight: 500;
+        padding: 7px 20px;
+        color: var(--pb-color-heading-primary);
+        &:hover{
+            background-color: var(--pb-color-theme-primary);
+            color: var(--pb-color-common-white);
+        }
+    }
+    &.item-2{
+        background-color: var(--pb-color-heading-primary);
+        .header{
+            color: var(--pb-color-common-white);
+            width: 100%;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .contact-list{
+            list-style: none;
+            li{
+                color: var(--pb-color-common-white);
+                font-family: var(--pb-ff-heading);
+                font-size: 16px;
+                font-weight: 500;
+                span{
+                    font-size: 16px;
+                    font-family: var(--pb-ff-body);
+                    display: block;
+                    font-weight: 400;
+                }
+                a{
+                    font-size: 16px;
+                    font-family: var(--pb-ff-body);
+                    display: block;
+                    font-weight: 400;
+                }
+                &:not(:last-of-type){
+                    margin-bottom: 20px;
+                    padding-bottom: 20px;
+                    border-bottom: 1px solid rgba(255, 255, 255, .1);
+                }
+            }
+        }
+    }
+}
+
+.contact-form-area{
+    .section-title{
+        line-height: 1;
+    }
+}
+
+.contact-form{
+    .form-control{
+        box-shadow: none;
+        padding: 15px;
+        margin-bottom: 20px;
+        border: 1px solid var(--pb-color-border-1);
+        border-radius: 0;
+    }
+    .submit-btn{
+        margin-top: 40px;
+        @include breakpoint(sm){
+            margin-top: 20px;
+        }
+    }
+}
+
+// Contact Page
+
+.contact-content{
+    .title{
+        font-size: 54px;
+        font-weight: 700;
+        margin-bottom: 25px;
+        @include breakpoint(md){
+            font-size: 40px;
+        }
+    }
+    p{
+        max-width: 520px;
+        width: 100%;
+    }
+    .contact-box{
+        background-color: var(--pb-color-common-white);
+        max-width: 520px;
+        width: 100%;
+        border-radius: 20px;
+        padding: 50px 40px;
+        margin-top: 40px;
+        .contact-list{
+            li{
+                @include flex-vertical-center;
+                column-gap: 15px;
+                &:not(:last-of-type){
+                    margin-bottom: 20px;
+                }
+                i{
+                    color: var(--pb-color-theme-secondary);
+                }
+                span,
+                a{
+                    font-size: 20px;
+                    font-weight: 600;
+                    color: var(--pb-color-text-body);
+                    @include breakpoint(sm){
+                        font-size: 15px;
+                    }
+                }
+                a{
+                    &:hover{
+                        color: var(--pb-color-theme-secondary);
+                    }
+                }
+            }
+        }
+    }
+}
+
+.contact-form{
+    background-color: var(--pb-color-common-white);
+    padding: 50px 40px;
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+    @include breakpoint(sm){
+        padding: 40px 20px;
+    }
+    .submit-btn{
+        .pb-primary-btn{
+            width: auto;
+        }
+    }
+}
+
+.map-wrapper{
+    margin-bottom: -10px;
+}
+
+.error-content{
+    max-width: 1030px;
+    margin: 0 auto;
+    .error-img{
+        margin-bottom: 20px;
+    }
+    .sub-title{
+        font-size: 54px;
+        font-weight: 700;
+        margin-bottom: 50px;
+        @include breakpoint(md){
+            font-size: 40px;
+        }
+        @include breakpoint(sm){
+            font-size: 28px;
+        }
+    }
+    
+    .error-img-2{
+        display: block;
+        width: 100%;
+    }
+
+    .error-btn{
+        display: inline-block;
+        background: var(--pb-color-common-yellow);
+        border: 1px solid var(--pb-color-common-yellow);
+        padding: 20px 80px;
+    }
+}
+
+
+/* !END: Theme Contact CSS */

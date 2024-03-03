@@ -1,0 +1,212 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Pricing CSS
+----------------------------------------*/
+.pricing-tab{
+    position: relative;
+    z-index: 1;
+    .shape{
+        position: absolute;
+        top: 35px;
+        right: -70px;
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    .nav-tabs{
+        justify-content: center;
+        column-gap: 10px;
+        border: none;
+        margin-bottom: 60px;
+        @include breakpoint(md){
+            margin: 40px;
+        }
+        .nav-link{
+            color: var(--pb-color-text-body);
+            font-size: 16px;
+            font-weight: 500;
+            padding: 8px 25px;
+            border: 1px solid #657EFF;
+            border-radius: 30px;
+            position: relative;
+            z-index: 1;
+            transition: all 0.3s ease-in-out;
+            &:before{
+                background: var(--pb-color-gradient-2);
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                visibility: hidden;
+                opacity: 0;
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+                border-radius: 20px;
+            }
+            &.active,
+            &:hover{
+                &:before{
+                    visibility: visible;
+                    opacity: 1;
+                }
+                color: var(--pb-color-common-white);
+            }
+        }
+    }
+}
+
+.pricing-item{
+    background-color: var(--pb-color-grey-1);
+    position: relative;
+    padding: 40px;
+    border-radius: 20px;
+    transition: all 0.3s ease-in-out;
+    z-index: 1;
+    @include breakpoint(lg){
+        padding: 40px 20px;
+    }
+    @include breakpoint(sm){
+        padding: 40px 20px;
+    }
+    &:before{
+        background: var(--pb-color-gradient-1);
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        visibility: hidden;
+        opacity: 0;
+        z-index: -1;
+        transition: all 0.3s ease-in-out;
+        border-radius: 20px;
+    }
+    .pricing-icon{
+        background-color: var(--pb-color-common-white);
+        height: 100px;
+        width: 100px;
+        @include flex-center;
+        border-radius: 50%;
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        @include breakpoint(lg){
+            right: 20px;
+        }
+        @include breakpoint(sm){
+            right: 20px;
+        }
+    }
+    .pricing-content{
+        .sub-title{
+            color: var(--pb-color-heading-primary);
+            font-size: 22px;
+            font-weight: 600;
+            display: block;
+            margin-bottom: 40px;
+            line-height: 1;
+            transition: all 0.3s ease-in-out;
+        }
+        .title{
+            font-size: 54px;
+            font-weight: 700;
+            margin-bottom: 30px;
+            transition: all 0.3s ease-in-out;
+            span{
+                font-size: 16px;
+                font-weight: 400;
+            }
+        }
+        p{
+            margin-bottom: 25px;
+            transition: all 0.3s ease-in-out;
+        }
+        .pricing-list{
+            list-style: none;
+            margin-bottom: 40px;
+            li{
+                font-size: 16px;
+                font-weight: 400;
+                transition: all 0.3s ease-in-out;
+                &:not(:last-of-type){
+                    margin-bottom: 10px;
+                }
+                i{
+                    margin-right: 10px;
+                    color: var(--pb-color-heading-primary);
+                    transition: all 0.3s ease-in-out;
+                }
+            }
+        }
+        .pricing-btn{
+            background-color: transparent;
+            font-family: var(--pb-ff-heading);
+            color: var(--pb-color-heading-primary);
+            display: inline-block;
+            font-size: 16px;
+            font-weight: 600;
+            padding: 20px 30px;
+            transition: all 0.3s ease-in-out;
+            border: 1px solid var(--pb-color-heading-primary);
+            border-radius: 30px;
+            line-height: 1;
+            width: 100%;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+            &:before{
+                background: var(--pb-color-gradient-1);
+                content: "";
+                width: 100%;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                visibility: hidden;
+                opacity: 0;
+                border-radius: 30px;
+                z-index: -1;
+                transition: all 0.3s ease-in-out;
+            }
+            &:hover{
+                color: var(--pb-color-common-white);
+                border: 1px solid transparent;
+                &:before{
+                    visibility: visible;
+                    opacity: 1;
+                }
+            }
+        }
+    }
+    &.active{
+        &:before{
+            visibility: visible;
+            opacity: 1;
+        }
+        .sub-title,
+        .title,
+        p,
+        .pricing-list li i,
+        .pricing-list li{
+            color: var(--pb-color-common-white);
+        }
+        .pricing-btn{
+            background-color: var(--pb-color-common-white);
+            border: 1px solid var(--pb-color-common-white);
+            &:hover{
+                background-color: var(--pb-color-heading-primary);
+                color: var(--pb-color-common-white);
+                border: 1px solid var(--pb-color-heading-primary);
+                &:before{
+                    display: none;
+                }
+            }
+        }
+    }
+}
+
+/* !END: Theme Pricing CSS */

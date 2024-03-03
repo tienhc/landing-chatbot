@@ -1,0 +1,74 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Content CSS
+----------------------------------------*/
+.content-thumb{
+    @include breakpoint(md){
+        margin-bottom: 30px;
+    }
+    img{
+        @include breakpoint(md){
+            width: 100%;
+        }
+    }
+}
+
+.content-info{
+    .section-heading{
+        .section-title{
+            margin-left: 0;
+            span{
+                &:before{
+                    bottom: -5px;
+                }
+            }
+        }
+    }
+}
+
+.content-list{
+    li{
+        display: grid;
+        align-items: center;
+        grid-template-columns: 45px 1fr;
+        grid-gap: 15px;
+        position: relative;
+        &:not(:last-of-type){
+            margin-bottom: 30px;
+        }
+        .arrow{
+            position: absolute;
+            bottom: -32px;
+            left: 0;
+            img{
+                height: 33px;
+            }
+        }
+        .number{
+            background-color: var(--pb-color-theme-primary);
+            height: 45px;
+            width: 45px;
+            @include flex-center;
+            border-radius: 50%;
+            color: var(--pb-color-common-white);
+            font-size: 16px;
+        }
+        .title{
+            background-color: var(--pb-color-grey-1);
+            color: var(--pb-color-text-body);
+            font-weight: 500;
+            max-width: 330px;
+            width: 100%;
+            height: 45px;
+            display: flex;
+            align-items: center;
+            margin-bottom: 0;
+            padding: 0 20px 0 20px;
+            padding-left: 30px;
+            border-radius: 30px;
+        }
+    }
+}
+
+/* !END: Theme Content CSS */

@@ -1,0 +1,127 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Counter CSS
+----------------------------------------*/
+.counter-section{
+    position: relative;
+    z-index: 1;
+    .bg-color{
+        background-color: var(--pb-color-grey-1);
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.counter-wrap{
+    background: var(--pb-color-gradient-2);
+    padding: 60px 40px;
+    border-radius: 20px;
+    @include breakpoint(md){
+        padding: 40px;
+    }
+}
+
+.counter-item{
+    @include flex-vertical-center;
+    justify-content: center;
+    column-gap: 20px;
+    .counter-icon{
+        width: 60px;
+        img{
+            width: 60px;
+        }
+    }
+    .counter-content{
+        margin-top: -10px;
+        .title{
+            color: var(--pb-color-common-white);
+            font-size: 54px;
+            font-weight: 700;
+            margin-bottom: 5px;
+            @include flex-vertical-center;
+            @include breakpoint(lg){
+                font-size: 44px;
+            }
+            @include breakpoint(sm){
+                justify-content: center;
+            }
+            .odometer-auto-theme{
+                font-family: inherit;
+                .odometer-digit-spacer{
+                    padding-right: 2px;
+                }
+            }
+        }
+        p{
+            color: var(--pb-color-common-white);
+            margin-bottom: 0;
+            letter-spacing: 0.3px;
+            @include breakpoint(lg){
+                font-size: 14px;
+            }
+        }
+    }
+}
+
+.counter-wrap.wrap-2{
+    background: var(--pb-color-common-white);
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+    position: relative;
+    @include breakpoint(sm){
+        padding: 20px 40px 40px 40px;
+        margin: 0 20px 0 20px;
+    }
+    &:before{
+        background: var(--pb-color-gradient-1);
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: -1;
+        border-radius: 20px;
+    }
+    .counter-item{
+        .title{
+            color: var(--pb-color-theme-primary);
+        }
+        p{
+            color: var(--pb-color-heading-primary);
+            font-size: 16px;
+            font-weight: 700;
+        }
+    }
+}
+
+.counter-2{
+    overflow: hidden;
+}
+
+.counter-wrap.wrap-3{
+    background: transparent;
+    padding: 0;
+    position: relative;
+    .shape{
+        position: absolute;
+        top: 0px;
+        left: -100px;
+    }
+    .counter-item{
+        padding: 30px 0 25px 0;
+        border: 1px solid var(--pb-color-theme-primary);
+        border-radius: 20px;
+        text-align: center;
+        .title{
+            justify-content: center;
+        }
+    }
+}
+
+/* !END: Theme Counter CSS */

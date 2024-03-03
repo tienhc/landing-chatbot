@@ -1,0 +1,213 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Testimonial CSS
+----------------------------------------*/
+.testi-info{
+    padding-right: 20px;
+    @include breakpoint(md){
+        padding-right: 0;
+    }
+    .section-heading{
+        .section-title{
+            margin-bottom: 20px;
+            span{
+                &:before{
+                    bottom: -3px;
+                }
+            }
+        }
+        p{
+            max-width: 500px;
+            width: 100%;
+        }
+    }
+}
+
+.testi-items{
+    padding-top: 10px;
+    padding-left: 20px;
+    @include breakpoint(md){
+        padding-left: 0;
+    }
+}
+
+.testi-item{
+    background-color: var(--pb-color-common-white);
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+    padding: 40px;
+    &:not(:last-of-type){
+        margin-bottom: 50px;
+    }
+    .client-thumb{
+        position: absolute;
+        top: -10px;
+        left: -10px;
+        img{
+            width: 120px;
+            height: 120px;
+        }
+    }
+    .quote{
+        position: absolute;
+        top: 40px;
+        right: 40px;
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    .testi-content{
+        .name{
+            padding-left: 110px;
+            font-size: 22px;
+            font-weight: 600;
+            margin-bottom: 45px;
+            span{
+                color: var(--pb-color-text-body);
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                margin-top: 5px;
+            }
+        }
+        .review{
+            @include flex-vertical-center;
+            list-style: none;
+            margin-bottom: 15px;
+            li{
+                &:not(:last-of-type){
+                    margin-right: 7px;
+                }
+                i{
+                    color: #FE9D51;
+                }
+            }
+        }
+        p{
+            font-size: 20px;
+            line-height: 1.4;
+            margin-bottom: 0;
+            @include breakpoint(sm){
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+// Testi 2
+
+.testimonial-section-2{
+    position: relative;
+    z-index: 1;
+    .bg-color{
+        background-color: var(--pb-color-grey-1);
+        width: 100%;
+        height: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: -1;
+    }
+}
+
+.testi-wrap{
+    background-color: var(--pb-color-common-white);
+    grid-gap: 65px;
+    border-radius: 20px;
+    // border-bottom: 5px solid var(--pb-color-theme-primary);
+    box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+    padding: 85px 70px;
+    position: relative;
+    &:before{
+        background: var(--pb-color-gradient-1);
+        content: "";
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        bottom: -5px;
+        left: 0;
+        z-index: -1;
+        border-radius: 20px;
+    }
+    @include breakpoint(sm){
+        padding: 40px;
+    }
+    .shape{
+        position: absolute;
+        top: -120px;
+        right: -80px;
+        z-index: -1;
+        @include breakpoint(xxl){
+            right: -30px;
+        }
+        @include breakpoint(xl){
+            right: 0;
+        }
+        @include breakpoint(md){
+            top: -60px;
+        }
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+    .quote{
+        position: absolute;
+        left: 70px;
+        top: 50%;
+        transform: translateY(-50%);
+        @include breakpoint(sm){
+            display: none;
+        }
+    }
+}
+
+.testi-carousel-wrap{
+    padding-left: 170px;
+    @include breakpoint(sm){
+        padding-left: 0;
+    }
+    .testi-carousel{
+        .swiper-pagination{
+            position: absolute;
+            top: 40px;
+            right: 40px;
+            left: auto;
+            bottom: auto;
+            width: auto;
+            @include breakpoint(sm){
+                display: none;
+            }
+        }
+    }
+}
+
+
+.testi-box{
+    .author-info{
+        display: grid;
+        grid-template-columns: 95px 1fr;
+        align-items: center;
+        grid-gap: 30px;
+        margin-bottom: 35px;
+        .name{
+            font-size: 22px;
+            font-weight: 600;
+            span{
+                color: var(--pb-color-text-body);
+                display: block;
+                font-size: 16px;
+                font-weight: 500;
+                margin-top: 5px;
+            }
+        }
+    }
+    p{
+        font-size: 20px;
+        margin-bottom: 0;
+        line-height: 1.6;
+    }
+}
+
+/* !END: Theme Testimonial CSS */

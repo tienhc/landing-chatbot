@@ -1,0 +1,47 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Faq CSS
+----------------------------------------*/
+.faq-content{
+    .accordion-item{
+        border: none;
+        &:not(:last-of-type){
+            margin-bottom: 20px;
+        }
+        .accordion-header{
+            .accordion-button{
+                color: var(--pb-color-heading-primary);
+                font-size: 20px;
+                font-weight: 600;
+                box-shadow: none;
+                border: none;
+                padding: 25px;
+                border-radius: 30px;
+                box-shadow: 0px 0px 60px 0px rgba(0, 0, 0, 0.05);
+                &:after {
+                    background-image: none;
+                    font-family: "Font Awesome 6 Pro";
+                    color: var(--pb-color-common-purple);
+                    content: "\f101";
+                    height: auto;
+                    width: auto;
+                }
+                &:not(.collapsed) {
+                    background-color: var(--pb-color-common-purple);
+                    color: var(--pb-color-common-white);
+                    &:after {
+                        color: var(--pb-color-common-white);
+                        transform: rotate(90deg);
+                    }
+                }
+            }
+        }
+        .accordion-body{
+            color: var(--pb-color-text-body);
+            padding-bottom: 0;
+        }
+    }
+}
+
+/* !END: Theme Faq CSS */

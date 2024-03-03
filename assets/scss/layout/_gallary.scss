@@ -1,0 +1,107 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Sponsor CSS
+----------------------------------------*/
+
+.gallary-section{
+    .gallary-top{
+        .section-heading{
+            margin-bottom: 0;
+            .section-title{
+                span{
+                    &:before{
+                        bottom: 0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.gallary-top{
+    display: flex;
+    align-items: end;
+    justify-content: space-between;
+    column-gap: 50px;
+    margin-bottom: 60px;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    .section-heading{
+        margin-bottom: 0;
+    }
+    .gallary-right{
+        p{
+            max-width: 520px;
+            width: 100%;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+// Gallary 2
+
+.gallary-2{
+    overflow: hidden;
+    .gallary-top{
+        align-items: end;
+        margin-bottom: 160px;
+        p{
+            color: var(--pb-color-common-white);
+            margin-bottom: 0;
+        }
+    }
+}
+
+.gallary-item{
+    position: relative;
+    .gallary-img{
+        width: 100%;
+        object-fit: cover;
+        object-position: center center;
+        border-radius: 20px;
+        overflow: hidden;
+    }
+    .gallary-btn-wrap{
+        text-align: center;
+        margin-top: 40px;
+        position: absolute;
+        left: 50%;
+        bottom: -100px;
+        transform: translateX(-50%);
+        display: none;
+        transition: 0.5s all ease-in-out;
+        .gallary-btn{
+            color: var(--pb-color-common-white);
+            font-size: 16px;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            column-gap: 20px;
+            text-transform: capitalize;
+        }
+    }
+}
+
+.gallary-carousel{
+    max-width: 1070px;
+    width: 100%;
+    margin: 0 auto;
+    overflow: visible;
+    .swiper-wrapper{
+        .swiper-slide{
+            transition: 0.5s all ease-in-out;
+            &.swiper-slide-active{
+                transform: translateY(-100px);
+                .gallary-item{
+                    .gallary-btn-wrap{
+                        display: block;
+                    }
+                }
+            }
+        }
+    }
+}
+
+/* !END: Theme Sponsor CSS */

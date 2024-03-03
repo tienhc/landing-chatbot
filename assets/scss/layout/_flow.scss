@@ -1,0 +1,103 @@
+@use "../utilities" as *;
+
+/**----------------------------------------
+START: Theme Flow CSS
+----------------------------------------*/
+
+.flow-top{
+    .gallary-right{
+        p{
+            color: var(--pb-color-common-white);
+        }
+    }
+}
+
+.flow-wrap{
+    position: relative;
+    z-index: 1;
+    .shapes{
+        .shape{
+            position: absolute;
+            top: 50%;
+            left: 35px;
+            transform: translateY(-50%);
+            z-index: -1;
+            @include breakpoint(sm){
+                display: none;
+            }
+            &.shape-1{
+                transform: inherit;
+                top: auto;
+                left: auto;
+                bottom: -70px;
+                right: 70px;
+            }
+        }
+    }
+}
+
+.flow-item{
+    @include flex-vertical-center;
+    column-gap: 75px;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    @include breakpoint(xl){
+        column-gap: 30px;
+    }
+    @include breakpoint(sm){
+        column-gap: 10px;
+    }
+    &:not(:last-of-type){
+        margin-bottom: 75px;
+    }
+    &:nth-child(2){
+        padding-left: 220px;
+        @include breakpoint(xl){
+            padding-left: 180px;
+        }
+        @include breakpoint(lg){
+            padding-left: 150px;
+        }
+        @include breakpoint(sm){
+            padding-left: 0;
+        }
+    }
+    .flow-left{
+        @include flex-vertical-center;
+        img{
+            @include breakpoint(lg){
+                width: 50%;
+            }
+            @include breakpoint(sm){
+                width: 30%;
+            }
+        }
+        .number{
+            color: var(--pb-color-common-yellow);
+            font-size: 30px;
+            font-weight: 600;
+            height: 80px;
+            width: 80px;
+            border: 2px solid var(--pb-color-common-yellow);
+            @include flex-center;
+            border-radius: 50%;
+        }
+    }
+    .flow-right{
+        .title{
+            color: var(--pb-color-common-white);
+            margin-bottom: 0;
+            @include breakpoint(lg){
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.flow-thumb{
+    img{
+        width: 100%;
+    }
+}
+
+/* !END: Theme Flow CSS */
